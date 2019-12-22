@@ -41,7 +41,7 @@ void printCFG();
 
 int main()
 {
-    loadCFGFromFile("cfg file path");
+    loadCFGFromFile("C:\\Users\\musta\\CLionProjects\\untitled\\cfg.txt");
 
     printCFG();
 
