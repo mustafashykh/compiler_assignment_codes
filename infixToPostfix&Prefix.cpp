@@ -1,6 +1,6 @@
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
+#include <cstdio>
+#include <cstring>
+#include <string>
 using namespace std;
 
 char s[50];
@@ -35,9 +35,10 @@ int pr(char elem)
 
 void reverseChar(char* str, int len)
 {
+
     for(int i=0; i<len/2; i++)
     {
-        char temp=str[i];
+        char temp = str[i];
         str[i]=str[len-i-1];
         str[len-i-1]=temp;
     }
@@ -66,7 +67,15 @@ int main()
     }
 
     if(flag){
+        for(int z = 0; z < (int)strlen(infx); z++){
+            if((int) infx[z] == 40){
+                infx[z] = ')';
+            }else if((int) infx[z] == 41){
+                infx[z] = '(';
+            }
+        }
         reverseChar(infx, strlen(infx));
+        printf("%s",infx);
     }
     push('#');
     while ((ch = infx[i++]) != '\0')
