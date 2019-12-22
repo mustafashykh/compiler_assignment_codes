@@ -148,3 +148,8 @@ int main()
 }
 
 
+
+// format of input
+
+// A->ab|cA|B
+// B->f|gh|i
